@@ -1,0 +1,21 @@
+{
+  "restaurant_id": 336,
+  "restaurant_name": "스타벅스 강남대로점",
+  "address": "서울시 강남구",
+  "lat": 37.5030938,
+  "lon": 127.025579,
+  "rating": 3.83333,
+  "tel": "02-1234-4567",
+  "prices": "AROUND_10K",
+  "restaurant_type": "KOREAN",
+  "region_code": 0,
+  "review_count": 3,
+  "site": null,
+  "website": "https://startbucks.co.kr",
+  "img_url1": "https://img2.yna.co.kr/etc/inner/KR/2018/06/25/AKR20180625059100030_01_i_P4.jpg",
+  "img_url2": "",
+  "img_url3": "",
+  "img_url4": "",
+  "img_url5": "",
+  "img_url6": ""
+}

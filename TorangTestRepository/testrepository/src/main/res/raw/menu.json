@@ -1,0 +1,50 @@
+[
+  {
+    "restaurant_id": 336,
+    "rating": 0.0,
+    "menu_id": "2900",
+    "menu_name": "나이트로 바닐라 크림",
+    "menu_price": "5000",
+    "menu_pic_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2019/09/[9200000002487]_20190919181354811.jpg"
+  },
+  {
+    "restaurant_id": 336,
+    "rating": 0.0,
+    "menu_id": "2902",
+    "menu_name": "나이트로 콜드 브루",
+    "menu_price": "3500",
+    "menu_pic_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2017/03/[9200000000479]_20170328134443491.jpg"
+  },
+  {
+    "restaurant_id": 336,
+    "rating": 0.0,
+    "menu_id": "2905",
+    "menu_name": "돌체 콜드 브루",
+    "menu_price": "5500",
+    "menu_pic_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2019/04/[9200000002081]_20190409153909754.jpg"
+  },
+  {
+    "restaurant_id": 336,
+    "rating": 0.0,
+    "menu_id": "2906",
+    "menu_name": "바닐라 크림 콜드 브루",
+    "menu_price": "6500",
+    "menu_pic_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2017/04/[9200000000487]_20170405152830656.jpg"
+  },
+  {
+    "restaurant_id": 336,
+    "rating": 0.0,
+    "menu_id": "2907",
+    "menu_name": "제주 비자림 콜드 브루",
+    "menu_price": "6600",
+    "menu_pic_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2020/09/[9200000002672]_20200921171223898.jpg"
+  },
+  {
+    "restaurant_id": 336,
+    "rating": 0.0,
+    "menu_id": "2908",
+    "menu_name": "콜드 브루",
+    "menu_price": "5700",
+    "menu_pic_url": "https://image.istarbucks.co.kr/upload/store/skuimg/2016/04/[9200000000038]_20160408135802583.jpg"
+  }
+]

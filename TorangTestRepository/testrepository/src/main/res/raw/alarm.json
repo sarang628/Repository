@@ -1,0 +1,653 @@
+[
+  {
+    "alarm_id": 44,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"외도스벅\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 399,
+    "create_date": "2020-10-11 03:33:11",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 43,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"외도스벅\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 399,
+    "create_date": "2020-10-10 23:19:43",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 42,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"외도스벅\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 399,
+    "create_date": "2020-10-10 23:19:33",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 41,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"외도스벅\" 게시물에 \"쿄쿄\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 399,
+    "create_date": "2020-10-10 23:19:01",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 40,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"외도스벅\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 399,
+    "create_date": "2020-10-10 23:18:48",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 39,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"외도스벅\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 399,
+    "create_date": "2020-10-10 23:18:34",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 38,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"한라봉케이크ㅋㅋ\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 395,
+    "create_date": "2020-09-28 11:24:38",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 37,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"흠\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 390,
+    "create_date": "2020-09-25 11:04:43",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 36,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"음식반 갬성반\" 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 393,
+    "create_date": "2020-09-25 11:04:39",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 31,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"카페라떼 벤티\" 게시물에 \"굿이요\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 372,
+    "create_date": "2020-03-11 16:42:42",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 30,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"last lunch\" 게시물에 \"ㅠㅠ\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 370,
+    "create_date": "2020-03-06 09:27:35",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 29,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"last day :..\" 게시물에 \"코로나나\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 369,
+    "create_date": "2020-03-06 04:06:10",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 27,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"tumblers\" 게시물에 \"텀블러 얼마??\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 367,
+    "create_date": "2020-03-05 12:37:42",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 28,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"tumblers\" 게시물에 \"텀블러 얼마??\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 367,
+    "create_date": "2020-03-05 12:37:42",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 24,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"선샤인 카드 삼 3..\" 게시물에 \"굿이요\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 364,
+    "create_date": "2020-03-05 03:10:11",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 23,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"everyday\" 게시물에 \"맛있겠네요..\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 319,
+    "create_date": "2020-03-04 04:00:30",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 16,
+    "user_id": 4,
+    "other_user_id": 11,
+    "contents": "Calia님이 매장이 넓고 시원... 게시물에 좋아요를 눌렀습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 310,
+    "create_date": "2020-03-04 03:54:29",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 11,
+      "user_name": "Calia",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "https://i2-prod.mirror.co.uk/incoming/article10971010.ece/ALTERNATES/s615/Lauren.jpg",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 17,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"매장이 넓고 시원...\" 게시물에 \"hahahahaha..\" 코멘트를남겼습니다.",
+    "alarm_type": "LIKE",
+    "review_id": 310,
+    "create_date": "2020-03-04 03:54:29",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 18,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \":)\" 게시물에 \"오.....\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 361,
+    "create_date": "2020-03-04 03:54:29",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 19,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"오랜지 칠러스\" 게시물에 \"와.....\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 360,
+    "create_date": "2020-03-04 03:54:29",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  },
+  {
+    "alarm_id": 21,
+    "user_id": 4,
+    "other_user_id": 4,
+    "contents": "베이글님이 \"banmi\" 게시물에 \"와 반미.....\" 코멘트를남겼습니다.",
+    "alarm_type": "COMMENT",
+    "review_id": 317,
+    "create_date": "2020-03-04 03:54:29",
+    "user": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    },
+    "otherUser": {
+      "user_id": 4,
+      "user_name": "Alex Yg",
+      "email": null,
+      "login_platform": null,
+      "create_date": null,
+      "profile_pic_url": "http://sarang628.iptime.org:90/profile_picture/2020-09-14_05:13:56.197.png",
+      "review_count": 0,
+      "followers": 0,
+      "following": 0
+    }
+  }
+]

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">sarang628.iptime.org</domain>
+        <domain includeSubdomains="true">vrscoo.com</domain>
+        <trust-anchors>
+            <certificates src="@raw/my_ca" />
+            <certificates src="@raw/vrscoo_cert" />
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

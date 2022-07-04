@@ -1,0 +1,6 @@
+rootProject.name = "TorangTestRepository"
+include ':app'
+include ':testrepository'
+
+include ':data'
+project(':data').projectDir = new File('../TorangAndroid/data')
