@@ -2,6 +2,8 @@ rootProject.name = "TorangRepositoryTestApp"
 include ':app'
 
 include ':TorangRepository'
-project(':TorangRepository').projectDir = new File('../TorangRepository')
+project(':TorangRepository').projectDir = new File('../../Repository/TorangRepository')
 include ':torang_core'
-project(':torang_core').projectDir = new File('../../TorangCore/torang_core')
+project(':torang_core').projectDir = new File('../../Core/TorangCore/torang_core')
+include ':TorangTestRepository'
+project(':TorangTestRepository').projectDir = new File('../TorangTestRepository/testrepository')
