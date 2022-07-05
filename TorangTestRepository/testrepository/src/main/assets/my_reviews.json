@@ -1,0 +1,49 @@
+[
+  {
+    "review_id": 561,
+    "contents": "ㅂㄹ",
+    "create_date": "2021-12-11 03:14:35",
+    "rating": 2.0,
+    "like": null,
+    "favorite": null,
+    "comment_amount": 0,
+    "user_id": 4,
+    "restaurant_id": 0,
+    "like_amount": 1.0
+  },
+  {
+    "review_id": 558,
+    "contents": "가나다라라마",
+    "create_date": "2021-12-05 10:51:57",
+    "rating": 4.0,
+    "like": null,
+    "favorite": null,
+    "comment_amount": 0,
+    "user_id": 4,
+    "restaurant_id": 0,
+    "like_amount": 0.0
+  },
+  {
+    "review_id": 529,
+    "contents": "수정 테스트요",
+    "create_date": "2021-11-10 08:25:45",
+    "rating": 5.0,
+    "like": null,
+    "favorite": null,
+    "comment_amount": 0,
+    "user_id": 4,
+    "restaurant_id": 0,
+    "like_amount": 0.0
+  },
+  {
+    "review_id": 578,
+    "contents": "null",
+    "create_date": "2021-11-08 14:50:35",
+    "rating": 5.0,
+    "favorite": null,
+    "comment_amount": 0,
+    "user_id": 4,
+    "restaurant_id": 0,
+    "like_amount": 0.0
+  }
+]
