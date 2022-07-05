@@ -23,14 +23,4 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.torangrepositorytestapp", appContext.packageName)
     }
-
-    @Test
-    fun test() {
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        val feedRepository = FeedRepositoryImpl(appContext)
-
-        runBlocking {
-            feedRepository.loadFeed()
-        }
-    }
 }

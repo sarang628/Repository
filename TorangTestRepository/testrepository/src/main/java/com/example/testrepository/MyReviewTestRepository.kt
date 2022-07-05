@@ -15,6 +15,7 @@ class MyReviewTestRepository(val context: Context) : MyReviewsRepository {
 
     protected val appDatabase = AppDatabase.getInstance(context)
     val userDao = appDatabase.userDao()
+    val reviewDao = appDatabase.myReviewDao()
 
     override suspend fun getMyReviews(restaurantId: Int): List<ReviewAndImage> {
 
@@ -51,6 +52,6 @@ class MyReviewTestRepository(val context: Context) : MyReviewsRepository {
     }
 
     override fun getMyReviews2(restaurantId: Int): Flow<List<MyReviewItemUiState>> {
-        TODO("Not yet implemented")
+        return reviewDao.getMyReviews2(0,0)
     }
 }

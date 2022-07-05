@@ -25,6 +25,7 @@ android {
 }
 
 dependencies {
+    testImplementation "junit:junit:$junitVersion"
     implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation project(path: ':torang_core')

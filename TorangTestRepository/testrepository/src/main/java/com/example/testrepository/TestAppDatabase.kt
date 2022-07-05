@@ -9,6 +9,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
 import com.example.testrepository.SeedDatabaseWorker.Companion.KEY_FILENAME
+import com.example.testrepository.SeedDatabaseWorker.Companion.KEY_FILENAME1
 import com.example.torang_core.data.AppDatabase
 import com.example.torang_core.utilities.DATABASE_NAME
 
@@ -32,7 +33,12 @@ object TestAppDatabase {
                         Log.d("__torang", "db created")
                         super.onCreate(db)
                         val request = OneTimeWorkRequestBuilder<SeedDatabaseWorker>()
-                            .setInputData(workDataOf(KEY_FILENAME to PLANT_DATA_FILENAME))
+                            .setInputData(
+                                workDataOf(
+                                    KEY_FILENAME to PLANT_DATA_FILENAME,
+                                    KEY_FILENAME1 to REVIEW_IMAGE_DATA_FILENAME
+                                )
+                            )
                             .build()
                         WorkManager.getInstance(context).enqueue(request)
                     }

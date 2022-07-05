@@ -20,4 +20,6 @@ package com.example.testrepository
  * Constants used throughout the app.
  */
 const val DATABASE_NAME = "sunflower-db"
-const val PLANT_DATA_FILENAME = "plants.json"
+//const val PLANT_DATA_FILENAME = "plants.json"
+const val PLANT_DATA_FILENAME = "my_reviews.json"
+const val REVIEW_IMAGE_DATA_FILENAME = "review_image.json"

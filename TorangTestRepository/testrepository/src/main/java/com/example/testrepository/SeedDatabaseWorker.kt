@@ -22,6 +22,7 @@ import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.example.torang_core.data.AppDatabase
 import com.example.torang_core.data.model.FeedData
+import com.example.torang_core.data.model.ReviewImage
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
@@ -29,13 +30,28 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class SeedDatabaseWorker(
-        context: Context,
-        workerParams: WorkerParameters
+    context: Context,
+    workerParams: WorkerParameters
 ) : CoroutineWorker(context, workerParams) {
     override suspend fun doWork(): Result = withContext(Dispatchers.IO) {
         try {
+
             Log.d(TAG, "doWork")
             val filename = inputData.getString(KEY_FILENAME)
+            val filename1 = inputData.getString(KEY_FILENAME1)
+            if (filename1 != null) {
+                applicationContext.assets.open(filename1).use { inputStream ->
+                    JsonReader(inputStream.reader()).use { jsonReader ->
+                        val imageType = object : TypeToken<List<ReviewImage>>() {}.type
+                        val imageList: List<ReviewImage> = Gson().fromJson(jsonReader, imageType)
+
+                        val database = AppDatabase.getInstance(applicationContext)
+                        database.pictureDao().insertAll(imageList)
+                        Result.success()
+                    }
+                }
+            }
+
             if (filename != null) {
                 applicationContext.assets.open(filename).use { inputStream ->
                     JsonReader(inputStream.reader()).use { jsonReader ->
@@ -44,7 +60,6 @@ class SeedDatabaseWorker(
 
                         val database = AppDatabase.getInstance(applicationContext)
                         database.feedDao().insertAll(plantList)
-
                         Result.success()
                     }
                 }
@@ -61,5 +76,6 @@ class SeedDatabaseWorker(
     companion object {
         private const val TAG = "__torang"
         const val KEY_FILENAME = "PLANT_DATA_FILENAME"
+        const val KEY_FILENAME1 = "REVIEW_IMAGE_DATA_FILENAME"
     }
 }
