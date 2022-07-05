@@ -35,18 +35,7 @@ class ExampleInstrumentedTest {
         }*/
     }
 
-    @Test
-    fun login() {
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        val loginrepository = LoginRepositoryImpl(appContext)
-
-        runBlocking {
-            val loggedInUserData = LoggedInUserData(userId = 4)
-            loginrepository.setLoggedInUser(loggedInUserData)
-        }
-    }
-
-    @Test
+    /*@Test
     fun sendReportReasonTest() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         val reportRepository =
@@ -55,5 +44,5 @@ class ExampleInstrumentedTest {
         runBlocking {
             assertEquals(true, reportRepository.sendReportReason(ReportReason.SPAM, 10))
         }
-    }
+    }*/
 }

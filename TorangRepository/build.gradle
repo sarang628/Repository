@@ -17,6 +17,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner "com.example.torangrepository.CustomTestRunner"
     }
 
     buildTypes {
@@ -29,6 +30,7 @@ android {
 
 dependencies {
 
+    implementation project(path: ':torang_core')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$archLifecycleVersion"
@@ -37,11 +39,9 @@ dependencies {
     /** ----------------------------------------------------------- *
      * Common                                                       *
      * ------------------------------------------------------------ */
-
     implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
-    implementation project(path: ':torang_core')
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$junitTestVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
@@ -62,14 +62,25 @@ dependencies {
      * Module                                                       *
      * ------------------------------------------------------------ */
 
-    implementation project(path: ':torang_core')
-
     /** HILT */
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
-    testImplementation "com.google.dagger:hilt-android-testing:$hiltVersion"
-    kaptTest "com.google.dagger:hilt-android-compiler:$hiltVersion"
-    androidTestImplementation "com.google.dagger:hilt-android-testing:$hiltVersion"
-    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
+    annotationProcessor "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
+
+    // For Robolectric tests.
+    //testImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    // ...with Kotlin.
+    //kaptTest("com.google.dagger:hilt-android-compiler:2.38.1")
+    // ...with Java.
+    //testAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
+
+    // For instrumented tests.
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    // ...with Kotlin.
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
+    // ...with Java.
+    //androidTestAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
 
 }
