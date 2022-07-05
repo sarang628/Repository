@@ -11,6 +11,8 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -41,6 +43,10 @@ class LoginRepositoryImpl @Inject constructor(
         return null
     }
 
+    override fun isLoginFlow(): Flow<Int> {
+        return loggedInUserDao.isLpogin()
+    }
+
     override fun getLoginUser(): LiveData<LoggedInUserData?> {
         return loggedInUserDao.getLoggedInUserData()
     }
@@ -52,11 +58,4 @@ class LoginRepositoryImpl @Inject constructor(
         TorangPreference().saveUserId(context, loggedInUserData.userId!!)
         loggedInUserDao.insert(loggedInUserData)
     }
-}
-
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class LoginRepositoryModule {
-    @Binds
-    abstract fun provideLoginRepository(loginRepositoryImpl: LoginRepositoryImpl): LoginRepository
 }

@@ -10,6 +10,7 @@ import com.example.torang_core.data.data.ReviewAndImage
 import com.example.torang_core.data.model.*
 import com.example.torang_core.data.model.ReviewImage.Companion.toReviewImage
 import com.example.torang_core.repository.*
+import kotlinx.coroutines.flow.Flow
 
 class TestRepository(private val context: Context) : FeedRepository,
     ReviewRepository, MenuRepository, MyReviewsRepository, MapRepository,
@@ -154,6 +155,10 @@ class TestRepository(private val context: Context) : FeedRepository,
         TODO("Not yet implemented")
     }
 
+    override fun isLoginFlow(): Flow<Int> {
+        TODO("Not yet implemented")
+    }
+    
     override fun getLoginUser(): LiveData<LoggedInUserData?> {
         TODO("Not yet implemented")
         //return loggedInUserData.getLoggedInUserData()
