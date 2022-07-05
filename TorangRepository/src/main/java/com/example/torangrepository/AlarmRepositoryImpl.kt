@@ -9,6 +9,7 @@ import com.example.torang_core.data.model.Alarm
 import com.example.torang_core.data.model.LoggedInUserData
 import com.example.torang_core.repository.AlarmRepository
 import com.example.torang_core.util.Logger
+import com.example.torangrepository.test.TestAlarmRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -19,7 +20,6 @@ import javax.inject.Singleton
 
 @Singleton
 class AlarmRepositoryImpl @Inject constructor(
-    @ApplicationContext private val context: Context,
     private val loggedInUserDao: LoggedInUserDao,
     private val restaurantService: RestaurantService
 ) : AlarmRepository {
@@ -43,11 +43,6 @@ class AlarmRepositoryImpl @Inject constructor(
         return loggedInUserDao.getLoggedInUserData()
     }
 
-    override suspend fun testLogout() {
-        loggedInUserDao.clear()
-        TorangPreference().logout(context)
-    }
-
     /** 로그인 여부 */
     override val isLogin: LiveData<Boolean> = loggedInUserDao.getLoggedInUserData().switchMap {
         if (it != null) {
@@ -58,9 +53,17 @@ class AlarmRepositoryImpl @Inject constructor(
     }
 }
 
+/**
+ * 로그인 테스트용 TestAlarmRepositoryImpl
+ * 실제 사용 AlarmRepositoryImpl
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class AlarmRepositoryModule {
+
     @Binds
+    //실제 사용
     abstract fun provideAlarmRepository(alarmRepository: AlarmRepositoryImpl): AlarmRepository
+    //로그인 테스트
+//    abstract fun provideAlarmRepository(alarmRepository: TestAlarmRepositoryImpl): AlarmRepository
 }

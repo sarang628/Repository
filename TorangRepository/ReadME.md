@@ -47,7 +47,7 @@ class CustomTestRunner : AndroidJUnitRunner() {
     }
 ```
 
-## 로그인 테스트 코드
+## 로그인 상태 만들기
 ```
 @get:Rule
     var hiltRule = HiltAndroidRule(this)

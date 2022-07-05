@@ -25,6 +25,9 @@ class LoginTest {
     lateinit var loggedInUserDao: LoggedInUserDao
 
 
+    /**
+     * userId에 원하는 사용자 Id를 설정해주세요.
+     */
     @Test
     fun login() {
         runBlocking {
