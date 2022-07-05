@@ -9,6 +9,7 @@ import com.google.gson.reflect.TypeToken
 import com.example.torang_core.data.data.ReviewAndImage
 import com.example.torang_core.data.model.*
 import com.example.torang_core.data.model.ReviewImage.Companion.toReviewImage
+import com.example.torang_core.data.uistate.MyReviewItemUiState
 import com.example.torang_core.repository.*
 import kotlinx.coroutines.flow.Flow
 
@@ -158,7 +159,7 @@ class TestRepository(private val context: Context) : FeedRepository,
     override fun isLoginFlow(): Flow<Int> {
         TODO("Not yet implemented")
     }
-    
+
     override fun getLoginUser(): LiveData<LoggedInUserData?> {
         TODO("Not yet implemented")
         //return loggedInUserData.getLoggedInUserData()
@@ -185,6 +186,10 @@ class TestRepository(private val context: Context) : FeedRepository,
     }
 
     override fun getMyReviews1(restaurantId: Int): LiveData<List<ReviewAndImage>> {
+        TODO("Not yet implemented")
+    }
+
+    override fun getMyReviews2(restaurantId: Int): Flow<List<MyReviewItemUiState>> {
         TODO("Not yet implemented")
     }
 }

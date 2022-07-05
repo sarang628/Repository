@@ -7,7 +7,9 @@ import com.example.torang_core.data.data.ReviewAndImage
 import com.example.torang_core.data.model.FeedData
 import com.example.torang_core.data.model.Review
 import com.example.torang_core.data.model.ReviewImage
+import com.example.torang_core.data.uistate.MyReviewItemUiState
 import com.example.torang_core.repository.MyReviewsRepository
+import kotlinx.coroutines.flow.Flow
 
 class MyReviewTestRepository(val context: Context) : MyReviewsRepository {
 
@@ -46,5 +48,9 @@ class MyReviewTestRepository(val context: Context) : MyReviewsRepository {
 
     override fun getMyReviews1(restaurantId: Int): LiveData<List<ReviewAndImage>> {
         return appDatabase.myReviewDao().getMyReviews(4, 1)
+    }
+
+    override fun getMyReviews2(restaurantId: Int): Flow<List<MyReviewItemUiState>> {
+        TODO("Not yet implemented")
     }
 }
