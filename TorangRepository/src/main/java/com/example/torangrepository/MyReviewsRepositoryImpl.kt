@@ -2,6 +2,8 @@ package com.example.torangrepository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.example.torang_core.data.dao.LoggedInUserDao
 import com.example.torang_core.data.dao.MyReviewDao
 import com.example.torang_core.data.dao.UserDao
 import com.example.torang_core.data.data.ReviewAndImage
@@ -22,7 +24,8 @@ class MyReviewsRepositoryImpl @Inject constructor(
     @ApplicationContext private val context: Context,
     private val restaurantService: RestaurantService,
     private val userDao: UserDao,
-    private val myReviewDao: MyReviewDao
+    private val myReviewDao: MyReviewDao,
+    private val loggedInUserDao: LoggedInUserDao
 ) :
     MyReviewsRepository {
 
@@ -64,11 +67,4 @@ class MyReviewsRepositoryImpl @Inject constructor(
         Logger.d("${userId()}, $restaurantId")
         return myReviewDao.getMyReviews(userId(), restaurantId)
     }
-}
-
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class MyReviewsRepositoryProvider() {
-    @Binds
-    abstract fun provideMyReviewsRepository(myReviewsRepositoryImpl: MyReviewsRepositoryImpl): MyReviewsRepository
 }
