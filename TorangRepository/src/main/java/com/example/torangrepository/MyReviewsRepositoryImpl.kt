@@ -2,7 +2,7 @@ package com.example.torangrepository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+
 import com.example.torang_core.data.dao.LoggedInUserDao
 import com.example.torang_core.data.dao.MyReviewDao
 import com.example.torang_core.data.dao.UserDao
@@ -10,16 +10,10 @@ import com.example.torang_core.data.data.ReviewAndImage
 import com.example.torang_core.data.model.FeedData
 import com.example.torang_core.data.model.ReviewImage
 import com.example.torang_core.data.uistate.MyReviewItemUiState
-import com.example.torang_core.util.Logger
 import com.example.torang_core.repository.MyReviewsRepository
-import dagger.Binds
-import dagger.Module
-import dagger.hilt.InstallIn
+import com.example.torang_core.util.Logger
 import dagger.hilt.android.qualifiers.ApplicationContext
-import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -67,13 +61,12 @@ class MyReviewsRepositoryImpl @Inject constructor(
     }
 
     override fun getMyReviews1(restaurantId: Int): LiveData<List<ReviewAndImage>> {
-
         Logger.d("${userId()}, $restaurantId")
         return myReviewDao.getMyReviews(userId(), restaurantId)
     }
 
     override fun getMyReviews2(restaurantId: Int): Flow<List<MyReviewItemUiState>> {
-        //return myReviewDao.getMyReviews2(userId(), restaurantId)
-        return MutableStateFlow(ArrayList())
+        return myReviewDao.getMyReviews2(userId(), restaurantId)
+        //return MutableStateFlow(ArrayList())
     }
 }

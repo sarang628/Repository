@@ -235,10 +235,3 @@ class MyReviewRepositoryImpl @Inject constructor(
         return userId
     }
 }
-
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class TorangRepositoryProvider {
-    @Binds
-    abstract fun provideMyReviewRepository(myReviewRepositoryImpl: MyReviewRepositoryImpl): MyReviewRepository
-}
