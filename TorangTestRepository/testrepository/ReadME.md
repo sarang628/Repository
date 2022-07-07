@@ -21,7 +21,7 @@ MyReviewDao
 테스트 저장소에서 MyReviewsRepository를 주입 할 수 있도록 설정해줘야합니다.
 
 ## 공통 데이터 베이스 의존성 주입 설정 방법
-app_root_package/di/DatabaseModule.kt
+app_root_package/com.example.torang_core.di/DatabaseModule.kt
 ```
 @InstallIn(SingletonComponent::class)
 @Module
@@ -37,7 +37,7 @@ class DatabaseModule {
 }
 ```
 ## 내 리뷰 저장소 의존성 주입 방법
-app_root_package/di/RepositoryModule.kt
+app_root_package/com.example.torang_core.di/RepositoryModule.kt
 ```
 @Module
 @InstallIn(SingletonComponent::class)
