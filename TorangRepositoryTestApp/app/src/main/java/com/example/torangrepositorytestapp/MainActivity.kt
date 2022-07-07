@@ -41,11 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         runBlocking {
             findViewById<TextView>(R.id.tv).text =
-                myReviewsRepository.getMyReviews(10).size.toString()
-
-            myReviewsRepository.getMyReviews1(0).observe(this@MainActivity) {
-                Logger.d(it.toString())
-            }
+                myReviewsRepository.getMyReviews3(4).toString()
         }
     }
 }
