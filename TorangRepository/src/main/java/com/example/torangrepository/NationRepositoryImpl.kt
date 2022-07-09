@@ -8,6 +8,11 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -15,9 +20,10 @@ import javax.inject.Singleton
 class NationRepositoryImpl @Inject constructor(
     private val restaurantDao: RestaurantDao,
     private val restaurantService: RestaurantService
-) :
-    NationRepository,
-    MapSharedRepositoryImpl(restaurantDao, restaurantService) {
+) : NationRepository, MapSharedRepositoryImpl(restaurantDao, restaurantService) {
+
+    private val selectNationItem: MutableStateFlow<NationItem> = MutableStateFlow(NationItem())
+
     override suspend fun getNationItems(): List<NationItem> {
         TODO("Not yet implemented")
     }
@@ -26,12 +32,13 @@ class NationRepositoryImpl @Inject constructor(
         TODO("Not yet implemented")
     }
 
-}
+    override fun getSelectNationItem(): StateFlow<NationItem> {
+        return selectNationItem
+    }
 
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class NationRepositoryProvider {
-    @Binds
-    abstract fun provideNationRepository(nationRepositoryImpl: NationRepositoryImpl): NationRepository
+    override suspend fun selectNationItem(nationItem: NationItem) {
+        selectNationItem.emit(nationItem)
+    }
+
 }
 
