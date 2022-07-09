@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.switchMap
+import com.example.torang_core.data.dao.FeedDao
 import com.example.torang_core.data.dao.LoggedInUserDao
 import com.example.torang_core.data.dao.UserDao
 import com.example.torang_core.data.model.*
@@ -16,6 +17,7 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -24,7 +26,8 @@ class FeedRepositoryImpl @Inject constructor(
     @ApplicationContext private val context: Context,
     private val feedServices: FeedServices, // 원격 저장소 주입
     private val userDao: UserDao, // 로컬 저장소 주입
-    private val user: LoggedInUserDao // 로컬 저장소 주입
+    private val user: LoggedInUserDao, // 로컬 저장소 주입
+    private val feedDao: FeedDao
 ) : FeedRepository {
 
     /** 로그인 여부 */
@@ -72,6 +75,14 @@ class FeedRepositoryImpl @Inject constructor(
         return userDao.getAllFeed()
     }
 
+    override fun getFeed1(): LiveData<List<Feed1Data>> {
+        return feedDao.getFeed()
+    }
+
+    override fun getFeed2(): Flow<List<Feed1Data>> {
+        return feedDao.getFeed1()
+    }
+
     /**
      * 서버에 피드를 요청합니다.
      */
@@ -92,14 +103,17 @@ class FeedRepositoryImpl @Inject constructor(
         //서버에서 받은 값을 리스트로 만듬 하나하나 삽입 할 경우 observe 이벤트가 과도하게 발생하여 아래와 같이 처리
         for (feed in list) {
             try {
+                // 사진 정보만 분리
                 feed.pictures?.also {
                     for (picture in it) {
                         reviewImages.add(picture.toReviewImage())
                     }
                 }
                 feeds.add(feed.toFeedData())
-
+                // 사용자 정보만 분리
                 feed.user?.also { users.add(UserData.parse(it)) }
+
+                // 좋아요 정보만 분리
                 if (feed.like != null) {
                     feed.like!!.reviewId = feed.review_id
                     feed.like!!.user_id = userId
@@ -108,6 +122,7 @@ class FeedRepositoryImpl @Inject constructor(
                     deleteLikes.add(Like(reviewId = feed.review_id, user_id = userId()))
                 }
 
+                // 즐겨찾기 정보만 분리
                 if (feed.favorite != null) {
                     Logger.d("즐겨찾기 추가 ${feed.favorite}")
                     feed.favorite!!.reviewId = feed.review_id
@@ -125,16 +140,11 @@ class FeedRepositoryImpl @Inject constructor(
                 Logger.e(e.toString())
             }
         }
-        userDao.deleteLikes(deleteLikes)
-        userDao.deleteAll()
-        userDao.insertUserAndPictureAndLikeAndRestaurantAndFeed(
-            users,
-            reviewImages,
-            likes,
-            restaurants,
-            feeds,
-            favorites
-        )
+//        userDao.deleteLikes(deleteLikes)
+//        userDao.deleteAll()
+//        userDao.insertUserAndPictureAndLikeAndRestaurantAndFeed(users, reviewImages, likes, restaurants, feeds, favorites)
+        // transaction 적용
+        userDao.deleteAllAndInsertAll(users, reviewImages, likes, restaurants, feeds, favorites, deleteLikes)
     }
 
     //좋아요 처리

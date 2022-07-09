@@ -12,6 +12,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -40,6 +41,14 @@ class ProfileRepositoryImpl @Inject constructor(
 
     override fun getFeed(): LiveData<List<Feed>> {
         return userDao.getAllFeed()
+    }
+
+    override fun getFeed1(): LiveData<List<Feed1Data>> {
+        return feedDao.getFeed()
+    }
+
+    override fun getFeed2(): StateFlow<List<Feed1Data>> {
+        TODO("Not yet implemented")
     }
 
     override suspend fun loadFeed() {
