@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.torangrepositorytestapp"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.torangrepositorytestapp.CustomTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':library')
+    implementation 'com.github.sarang628:TorangCore:5dd8950a5a'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$archLifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
+
+    /** common */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "androidx.core:core-ktx:$ktxVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitTestVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
+
+    /** by viewmodes */
+    implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
+    implementation 'androidx.activity:activity-ktx:1.1.0'
+
+    /** NAVIGATION COMPONENT */
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion" // Kotlin
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion" // Kotlin
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$navigationVersion"
+    // Feature module Support
+    androidTestImplementation "androidx.navigation:navigation-testing:$navigationVersion"
+    // Testing Navigation
+    implementation "androidx.navigation:navigation-compose:$navigationVersion"
+    // Jetpack Compose Integration
+
+    /** HILT */
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
+    annotationProcessor "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
+
+    // For Robolectric tests.
+    //testImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    // ...with Kotlin.
+    //kaptTest("com.google.dagger:hilt-android-compiler:2.38.1")
+    // ...with Java.
+    //testAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
+
+    // For instrumented tests.
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    // ...with Kotlin.
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
+    // ...with Java.
+    //androidTestAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
+}

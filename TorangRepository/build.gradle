@@ -1,71 +1,87 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
+ext {
+    // Sdk and tools
+    compileSdkVersion = 31
+    minSdkVersion = 23
+    targetSdkVersion = 30
+    buildToolsVersion = '30.0.3'
+
+    workVersion = '2.7.0'
+    coroutinesVersion = "1.4.2"
+    navigationVersion = '2.5.0-alpha03'
+    okhttpLoggingVersion = '4.7.2'
+    pagingVersion = '3.0.0-alpha02'
+    retrofitVersion = '2.9.0'
+    roomVersion = '2.4.0'
+    runnerVersion = '1.0.1'
+    truthVersion = '0.42'
+    testExtJunit = '1.1.0'
+    uiAutomatorVersion = '2.2.0'
+    viewPagerVersion = '1.0.0'
+    ktxVersion = '1.0.2'
+    materialVersion = '1.5.0'
+    ktxVersion = '1.6.0'
+    appCompatVersion = '1.4.1'
+    junitVersion = '4.13.2'
+    junitTestVersion = '1.1.3'
+    espressoCoreVersion = '3.4.0'
+    fragmentVersion = '1.5.0-alpha03'
+    roomVersion = '2.3.0'
+    kotlinVersion = '1.6.10'
+    kotlin_version = '1.5.20'
+    coroutinesVersion = "1.3.0-M2"
+    lifecycleVersion = '2.2.0'
+    archLifecycleVersion = '2.4.0'
+    glideVersion = '4.11.0'
+    constraintLayoutVersion = '2.1.3'
+    espressoVersion = '3.4.0'
+    swipeRefreshLayoutVersion = '1.1.0'
+    hiltVersion = '2.38.1'
+    hiltViewModelVersion = '1.0.0-alpha03'
+    recyclerViewVersion = '1.2.1'
+    facebookLibraryVersion = '8.1.0'
 }
 
-android {
-    compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
-
-    defaultConfig {
-        minSdkVersion rootProject.minSdkVersion
-        targetSdkVersion rootProject.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
-        testInstrumentationRunner "com.example." +
-                "repository.CustomTestRunner"
+buildscript {
+    ext.kotlinVersion = '1.6.10'
+    ext.navigationVersion = '2.5.0-alpha03'
+    ext.ktlintVersion = '0.33.0'
+    ext.hiltVersion = '2.38.1'
+    repositories {
+        google()
+        jcenter()
     }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
-dependencies {
-    implementation 'com.github.sarang628:TorangCore:5dd8950a5a'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$archLifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
-
-    /** common */
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    implementation "androidx.core:core-ktx:$ktxVersion"
-    implementation "androidx.appcompat:appcompat:$appCompatVersion"
-    implementation "com.google.android.material:material:$materialVersion"
-    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
-    testImplementation "junit:junit:$junitVersion"
-    androidTestImplementation "androidx.test.ext:junit:$junitTestVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
-
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
-
-    /** Retrofit */
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
-
-    /** Room */
-    implementation "androidx.room:room-runtime:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
-    testImplementation "androidx.room:room-testing:$roomVersion"
-    implementation "androidx.work:work-runtime-ktx:$workVersion"
-
-    /** HILT */
-    implementation "com.google.dagger:hilt-android:$hiltVersion"
-    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
-    kapt "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
-    annotationProcessor "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
-    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
-    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+        //maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
 }
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//    /** HILT */
+//    implementation "com.google.dagger:hilt-android:$hiltVersion"
+//    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
+//    kapt "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
+//    annotationProcessor "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
+//    id 'kotlin-kapt'
+//    id 'dagger.hilt.android.plugin'
+
