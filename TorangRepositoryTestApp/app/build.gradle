@@ -37,8 +37,7 @@ android {
 dependencies {
 
     implementation project(path: ':TorangRepository')
-    implementation project(path: ':torang_core')
-    implementation project(path: ':TorangTestRepository')
+    implementation 'com.github.sarang628:TorangCore:5dd8950a5a'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"

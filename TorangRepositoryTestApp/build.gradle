@@ -66,6 +66,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
         maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
         //maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
     }
