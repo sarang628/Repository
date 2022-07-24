@@ -17,7 +17,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-        testInstrumentationRunner "com.example.torangrepository.CustomTestRunner"
+        testInstrumentationRunner "com.example." +
+                "repository.CustomTestRunner"
     }
 
     buildTypes {
@@ -29,7 +30,7 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':torang_core')
+    implementation 'com.github.sarang628:TorangCore:5dd8950a5a'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$archLifecycleVersion"

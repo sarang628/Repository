@@ -10,7 +10,6 @@ import com.example.torang_core.data.data.MyReview
 import com.example.torang_core.data.data.ReviewAndImage
 import com.example.torang_core.data.model.FeedData
 import com.example.torang_core.data.model.ReviewImage
-import com.example.torang_core.data.uistate.MyReviewItemUiState
 import com.example.torang_core.datasource.local.MyReviewsLocalDataSource
 import com.example.torang_core.datasource.local.MyReviewsRemoteDataSource
 import com.example.torang_core.repository.MyReviewsRepository
@@ -73,11 +72,6 @@ class MyReviewsRepositoryImpl @Inject constructor(
     override fun getMyReviews1(restaurantId: Int): LiveData<List<ReviewAndImage>> {
         Logger.d("${userId()}, $restaurantId")
         return myReviewDao.getMyReviews(userId(), restaurantId)
-    }
-
-    override fun getMyReviews2(restaurantId: Int): Flow<List<MyReviewItemUiState>> {
-        return myReviewDao.getMyReviews2(userId(), restaurantId)
-        //return MutableStateFlow(ArrayList())
     }
 
     override suspend fun getMyReviews3(restaurantId: Int): List<MyReview> {

@@ -25,10 +25,11 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.sarang628:TorangCore:5dd8950a5a'
+
     testImplementation "junit:junit:$junitVersion"
     implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation project(path: ':torang_core')
 
     /** HILT */
     implementation "com.google.dagger:hilt-android:$hiltVersion"
